@@ -29,7 +29,7 @@ final class ViewController: UIViewController {
         yellowView.layer.cornerRadius = 50
         greenView.layer.cornerRadius = 50
         
-        redView.alpha = 1
+        redView.alpha = 0.3
         yellowView.alpha = 0.3
         greenView.alpha = 0.3
         
@@ -40,16 +40,16 @@ final class ViewController: UIViewController {
         
         switch currentColor {
         case .red:
-            redView.alpha = 0.3
-            yellowView.alpha = 1
+            redView.alpha = 1
+            greenView.alpha = 0.3
             currentColor = .yellow
         case .yellow:
-            yellowView.alpha = 0.3
-            greenView.alpha = 1
+            yellowView.alpha = 1
+            redView.alpha = 0.3
             currentColor = .green
         case . green:
-            greenView.alpha = 0.3
-            redView.alpha = 1
+            greenView.alpha = 1
+            yellowView.alpha = 0.3
             currentColor = .red
         }
     
